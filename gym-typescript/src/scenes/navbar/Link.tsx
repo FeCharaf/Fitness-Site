@@ -5,8 +5,11 @@ type Props = {
 }
 
 function Link({page}: Props) {
+    const lowerCasePage
   return (
-    <AnchorLink>
+    <AnchorLink className={}
+    href={}
+    onClick={}>
         {page}
     </AnchorLink>
   )

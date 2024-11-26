@@ -5,12 +5,11 @@ import SponsorRedBull from "@/assets/SponsorRedBull.png";
 import SponsorForbes from "@/assets/SponsorForbes.png";
 import SponsorFortune from "@/assets/SponsorFortune.png";
 
-type Props = {};
 
-const Home = ({ props }: Props) => {
+const Home = () => {
   return (
-    <section className="justify-center">
-      <div className="mt-20 flex h-3/4 w-full items-center justify-center">
+    <section className="justify-center bg-gray-20">
+      <div className="flex h-3/4 w-full items-center justify-center py-10">
         <div>
           <img src={EvolveText} className="w-1/3"></img>
           <img src={HomeText}></img>

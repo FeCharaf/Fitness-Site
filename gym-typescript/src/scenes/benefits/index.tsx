@@ -19,9 +19,24 @@ const Benefits = () => {
           into each and every member.
         </p>
         <div className="flex">
-          <Benefit icon="ICON" title="title" text="text" link="Learn More" />
-          <Benefit icon="ICON" title="title" text="text" link="Learn More" />
-          <Benefit icon="ICON" title="title" text="text" link="Learn More" />
+          <Benefit
+            icon="ICO"
+            title="State of the Art Facilities"
+            text="Neque adipiscing amet amet enim. Feugiat dolor enim fermentum in a in lectus pellentesque. Ullamcorper et."
+            link="Learn More"
+          />
+          <Benefit
+            icon="ICO"
+            title="100's of Diverse Classes"
+            text="Eu ipsum id egestas risus tempus enim semper felis quis. Nec consectetur ac venenatis facilisi est. Eget ac turpis id."
+            link="Learn More"
+          />
+          <Benefit
+            icon="ICO"
+            title="Expert and Pro Trainers"
+            text="Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient."
+            link="Learn More"
+          />
         </div>
       </div>
     </section>

@@ -9,9 +9,9 @@ import {
 
 const Benefits = () => {
   return (
-    <section className="w-full">
+    <section className="w-full pb-20">
       <div className="mx-auto w-5/6 items-center justify-center py-20">
-        <h1 className="font-montserrat text-3xl font-bold">
+        <h1 className="font-montserrat text-3xl font-bold mb-6">
           MORE THAN JUST GYM
         </h1>
         <p>
@@ -19,7 +19,7 @@ const Benefits = () => {
           you to your ultimate fitness goals with ease. We provide true care
           into each and every member.
         </p>
-        <div className="flex">
+        <div className="flex gap-8">
           <Benefit
             icon="ICO"
             title="State of the Art Facilities"
@@ -42,9 +42,9 @@ const Benefits = () => {
       </div>
 
       <div className="mx-auto flex w-5/6 gap-20">
-        <img src={BenefitsGraphic} />
+        <img src={BenefitsGraphic} alt="benefits-page-graphic" className="max-w-[500px] max-h-[500px]" />
 
-        <div className="w-3/4 my-auto">
+        <div className="my-auto w-3/4">
           <h1 className="text-3xl font-bold">
             MILLIONS OF HAPPY MEMBERS GETTING{" "}
             <strong className="text-primary-500">FIT</strong>
@@ -62,7 +62,9 @@ const Benefits = () => {
             facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit enim
             mattis odio in risus nunc.
           </p>
-          <button className="rounded-md bg-secondary-500 px-10 py-2 font-bold hover:bg-primary-500 hover:text-white">Join Now</button>
+          <button className="rounded-md bg-secondary-500 px-10 py-2 font-bold hover:bg-primary-500 hover:text-white">
+            Join Now
+          </button>
         </div>
       </div>
     </section>

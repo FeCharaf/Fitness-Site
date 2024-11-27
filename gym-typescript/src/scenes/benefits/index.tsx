@@ -1,4 +1,5 @@
 import Benefit from "./Benefit";
+import BenefitsGraphic from "@/assets/BenefitsPageGraphic.png";
 
 import {
   HomeModernIcon,
@@ -37,6 +38,31 @@ const Benefits = () => {
             text="Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient."
             link="Learn More"
           />
+        </div>
+      </div>
+
+      <div className="mx-auto flex w-5/6 gap-20">
+        <img src={BenefitsGraphic} />
+
+        <div className="w-3/4 my-auto">
+          <h1 className="text-3xl font-bold">
+            MILLIONS OF HAPPY MEMBERS GETTING{" "}
+            <strong className="text-primary-500">FIT</strong>
+          </h1>
+          <p className="my-5">
+            Nascetur aenean massa auctor tincidunt. Iaculis potenti amet egestas
+            ultrices consectetur adipiscing ultricies enim. Pulvinar fames vitae
+            vitae quis. Quis amet vulputate tincidunt at in nulla nec. Consequat
+            sed facilisis dui sit egestas ultrices tellus. Ullamcorper arcu id
+            pretium sapien proin integer nisl. Felis orci diam odio.
+          </p>
+          <p className="mb-5">
+            Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
+            tellus quam porttitor. Mauris velit euismod elementum arcu neque
+            facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit enim
+            mattis odio in risus nunc.
+          </p>
+          <button className="rounded-md bg-secondary-500 px-10 py-2 font-bold hover:bg-primary-500 hover:text-white">Join Now</button>
         </div>
       </div>
     </section>

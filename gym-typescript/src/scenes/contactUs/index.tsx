@@ -4,7 +4,7 @@ const ContactUs = () => {
   const inputStyles = `mb-5 rounded-lg bg-primary-300
   px-5 py-3 placeholder-white`;
   return (
-    <section className="py-24">
+    <section id="contactus" className="py-24">
       <div className="mx-auto flex h-[800px] w-5/6">
         <div>
           <h1 className="font-montserrat text-3xl font-bold">

@@ -9,7 +9,7 @@ import {
 
 const Benefits = () => {
   return (
-    <section className="w-full pb-20">
+    <section id="benefits" className="w-full pb-20">
       <div className="mx-auto w-5/6 items-center justify-center py-20">
         <h1 className="font-montserrat text-3xl font-bold mb-6">
           MORE THAN JUST GYM

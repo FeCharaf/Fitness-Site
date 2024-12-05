@@ -8,7 +8,7 @@ import image6 from "@/assets/image6.png";
 
 const OurClasses = () => {
   return (
-    <section className="py-20 bg-primary-100">
+    <section id="ourclasses" className="py-20 bg-primary-100">
       <div className="mx-auto w-5/6">
         <h1 className="py-8 text-3xl font-bold">OUR CLASSES</h1>
         <p className="w-3/5">

@@ -8,7 +8,7 @@ import SponsorFortune from "@/assets/SponsorFortune.png";
 
 const Home = () => {
   return (
-    <section className="justify-center bg-gray-20 pb-10">
+    <section id="home" className="justify-center bg-gray-20 pb-10">
       <div className="flex h-3/4 w-full items-center justify-center py-10">
         <div>
           <img src={EvolveText} className="w-1/3"></img>

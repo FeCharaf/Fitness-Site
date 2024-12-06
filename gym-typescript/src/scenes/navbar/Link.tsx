@@ -10,7 +10,7 @@ type Props = {
 const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
   // This code remove spaces and Lower Case the page
   const lowerCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPage;
-  // The (as) keyword forces the typescript to treat it like a SelectedPage type
+  // The (as) keyword forces the typescript to treat it like a SelectedPage enum
 
   return (
     <AnchorLink

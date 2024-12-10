@@ -34,7 +34,7 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <Home />
+      <Home setSelectedPage={setSelectedPage} />
       <Benefits />
       <OurClasses />
       <ContactUs />

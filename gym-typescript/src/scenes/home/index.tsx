@@ -1,12 +1,17 @@
+import { SelectedPage } from "@/shared/types";
 import HomeText from "@/assets/HomePageText.png";
 import HomeGraph from "@/assets/HomePageGraphic.png";
 import EvolveText from "@/assets/EvolveText.png";
 import SponsorRedBull from "@/assets/SponsorRedBull.png";
 import SponsorForbes from "@/assets/SponsorForbes.png";
 import SponsorFortune from "@/assets/SponsorFortune.png";
+import ActionButton from "@/shared/ActionButton";
 
+type Props = {
+  setSelectedPage: (value: SelectedPage) => void;
+};
 
-const Home = () => {
+const Home = ({ setSelectedPage }: Props) => {
   return (
     <section id="home" className="justify-center bg-gray-20 pb-10">
       <div className="flex h-3/4 w-full items-center justify-center py-10">
@@ -19,9 +24,9 @@ const Home = () => {
               Studios to get the Body Shapes That you Dream of.. Get Your Dream
               Body Now.
             </p>
-            <button className="rounded-md bg-amber-400 px-10 py-2 hover:text-white">
+            <ActionButton setSelectedPage={setSelectedPage}>
               Join Now
-            </button>
+            </ActionButton>
             <a href="#">Learn More</a>
           </div>
         </div>

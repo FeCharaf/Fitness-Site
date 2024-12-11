@@ -19,8 +19,8 @@ const Home = ({ setSelectedPage }: Props) => {
 
   return (
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
-      <div className="flex items-center justify-center">
-        <div>
+      <div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6">
+        <div className="z-10 mt-32 md:basis-3/5">
           <img src={EvolveText} alt="evolve text" className="w-1/3"></img>
           <img src={HomeText} alt="homepage text"></img>
           <div className="w-4/5">
@@ -44,7 +44,7 @@ const Home = ({ setSelectedPage }: Props) => {
           </div>
         </div>
         <div>
-          <img src={HomeGraph}></img>
+          <img src={HomeGraph} alt="home-pageGraphic"></img>
         </div>
       </div>
 

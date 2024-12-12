@@ -21,8 +21,14 @@ const Home = ({ setSelectedPage }: Props) => {
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
       <div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6">
         <div className="z-10 mt-32 md:basis-3/5">
-          <img src={EvolveText} alt="evolve text" className="w-1/3"></img>
-          <img src={HomeText} alt="homepage text"></img>
+          {/* HEADINGS */}
+          <div className="md:-mt-20">
+            <div className="relative">
+              <div className="before:absolute before:-top-20 before:z-[-1] before:-left-20 md:before:content-evolvetext">
+                <img src={HomeText} alt="homepage text"></img>
+              </div>
+            </div>
+          </div>
           <div className="w-4/5">
             <p className="mt-8 text-sm">
               Unrivaled Gym. Unparalleled Training Fitness Classes. World Class

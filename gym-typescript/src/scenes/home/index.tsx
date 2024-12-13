@@ -24,7 +24,7 @@ const Home = ({ setSelectedPage }: Props) => {
           {/* HEADINGS */}
           <div className="md:-mt-20">
             <div className="relative">
-              <div className="before:absolute before:-top-20 before:z-[-1] before:-left-20 md:before:content-evolvetext">
+              <div className="before:absolute before:-left-20 before:-top-20 before:z-[-1] md:before:content-evolvetext">
                 <img src={HomeText} alt="homepage text"></img>
               </div>
             </div>
@@ -49,7 +49,8 @@ const Home = ({ setSelectedPage }: Props) => {
             </div>
           </div>
         </div>
-        <div>
+        {/* IMAGE */}
+        <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
           <img src={HomeGraph} alt="home-pageGraphic"></img>
         </div>
       </div>

@@ -1,10 +1,10 @@
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { SelectedPage } from "@/shared/types";
 import ActionButton from "@/shared/ActionButton";
+import { motion } from "framer-motion";
 
 import HomeText from "@/assets/HomePageText.png";
 import HomeGraph from "@/assets/HomePageGraphic.png";
-import EvolveText from "@/assets/EvolveText.png";
 import SponsorRedBull from "@/assets/SponsorRedBull.png";
 import SponsorForbes from "@/assets/SponsorForbes.png";
 import SponsorFortune from "@/assets/SponsorFortune.png";
@@ -22,13 +22,19 @@ const Home = ({ setSelectedPage }: Props) => {
       <div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6">
         <div className="z-10 mt-32 md:basis-3/5">
           {/* HEADINGS */}
-          <div className="md:-mt-20">
+          <motion.div
+            className="md:-mt-20 "
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            whileDrag={{ scale: 0.9, rotate: 10 }}
+            drag dragSnapToOrigin
+          >
             <div className="relative">
-              <div className="before:absolute before:-left-20 before:-top-20 before:z-[-1] md:before:content-evolvetext">
+              <div className=" before:absolute before:-left-20 before:-top-20 before:z-[-1] md:before:content-evolvetext">
                 <img src={HomeText} alt="homepage text"></img>
               </div>
             </div>
-          </div>
+          </motion.div>
           <div className="w-4/5">
             <p className="mt-8 text-sm">
               Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
@@ -50,9 +56,9 @@ const Home = ({ setSelectedPage }: Props) => {
           </div>
         </div>
         {/* IMAGE */}
-        <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
+        <motion.div drag className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
           <img src={HomeGraph} alt="home-pageGraphic"></img>
-        </div>
+        </motion.div>
       </div>
 
       {/* SPONSORS */}

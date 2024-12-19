@@ -19,28 +19,37 @@ const Home = ({ setSelectedPage }: Props) => {
 
   return (
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
-      <div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6">
+      {/* IMAGE AND MAIN HEADER */}
+      <motion.div
+        className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
+        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+      >
         <div className="z-10 mt-32 md:basis-3/5">
           {/* HEADINGS */}
           <motion.div
-            className="md:-mt-20 "
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            whileDrag={{ scale: 0.9, rotate: 10 }}
-            drag dragSnapToOrigin
+            className="md:-mt-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }} //amount is the percentage of the div that you can see to proc the animation
+            transition={{ duration: 0.5 }} // duration of the animation
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
           >
             <div className="relative">
               <div className=" before:absolute before:-left-20 before:-top-20 before:z-[-1] md:before:content-evolvetext">
                 <img src={HomeText} alt="homepage text"></img>
               </div>
             </div>
-          </motion.div>
-          <div className="w-4/5">
             <p className="mt-8 text-sm">
               Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
               Studios to get the Body Shapes That you Dream of.. Get Your Dream
               Body Now.
             </p>
+          </motion.div>
+
+          <div className="w-4/5">
             <div className="mt-8 flex items-center gap-8">
               <ActionButton setSelectedPage={setSelectedPage}>
                 Join Now
@@ -56,10 +65,10 @@ const Home = ({ setSelectedPage }: Props) => {
           </div>
         </div>
         {/* IMAGE */}
-        <motion.div drag className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
+        <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
           <img src={HomeGraph} alt="home-pageGraphic"></img>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
 
       {/* SPONSORS */}
       {isAboveMediumScreens && (

@@ -8,7 +8,6 @@ import image6 from "@/assets/image6.png";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 
-
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
@@ -16,50 +15,52 @@ type Props = {
 const OurClasses = ({ setSelectedPage }: Props) => {
   return (
     <section id="ourclasses" className="bg-primary-100 py-20">
-      <div className="mx-auto w-5/6">
-        <h1 className="py-8 text-3xl font-bold">OUR CLASSES</h1>
-        <p className="w-3/5">
-          Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
-          tellus quam porttitor. Mauris velit euismod elementum arcu neque
-          facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit enim
-          mattis odio in risus nunc.
-        </p>
-      </div>
+      <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}>
+        <div className="mx-auto w-5/6">
+          <h1 className="py-8 text-3xl font-bold">OUR CLASSES</h1>
+          <p className="w-3/5">
+            Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
+            tellus quam porttitor. Mauris velit euismod elementum arcu neque
+            facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit enim
+            mattis odio in risus nunc.
+          </p>
+        </div>
 
-      <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
-        <ul className="w-[3000px] ">
-          <Class
-            name="Weight Training Classes"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            image={image1}
-          />
-          <Class
-            name="Weight Training Classes"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            image={image2}
-          />
-          <Class
-            name="Weight Training Classes"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            image={image3}
-          />
-          <Class
-            name="Weight Training Classes"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            image={image4}
-          />
-          <Class
-            name="Weight Training Classes"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            image={image5}
-          />
-          <Class
-            name="Weight Training Classes"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            image={image6}
-          />
-        </ul>
-      </div>
+        <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
+          <ul className="w-[3000px] ">
+            <Class
+              name="Weight Training Classes"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              image={image1}
+            />
+            <Class
+              name="Weight Training Classes"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              image={image2}
+            />
+            <Class
+              name="Weight Training Classes"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              image={image3}
+            />
+            <Class
+              name="Weight Training Classes"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              image={image4}
+            />
+            <Class
+              name="Weight Training Classes"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              image={image5}
+            />
+            <Class
+              name="Weight Training Classes"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              image={image6}
+            />
+          </ul>
+        </div>
+      </motion.div>
     </section>
   );
 };

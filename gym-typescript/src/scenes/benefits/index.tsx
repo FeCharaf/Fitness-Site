@@ -119,7 +119,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
               </div>
             </div>
 
-            {/* DESCRIPT */}
+            {/* DESCRIPTION */}
             <motion.div
               initial="hidden"
               whileInView="visible"

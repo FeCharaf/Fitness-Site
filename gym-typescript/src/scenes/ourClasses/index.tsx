@@ -5,10 +5,17 @@ import image3 from "@/assets/image3.png";
 import image4 from "@/assets/image4.png";
 import image5 from "@/assets/image5.png";
 import image6 from "@/assets/image6.png";
+import { SelectedPage } from "@/shared/types";
+import { motion } from "framer-motion";
 
-const OurClasses = () => {
+
+type Props = {
+  setSelectedPage: (value: SelectedPage) => void;
+};
+
+const OurClasses = ({ setSelectedPage }: Props) => {
   return (
-    <section id="ourclasses" className="py-20 bg-primary-100">
+    <section id="ourclasses" className="bg-primary-100 py-20">
       <div className="mx-auto w-5/6">
         <h1 className="py-8 text-3xl font-bold">OUR CLASSES</h1>
         <p className="w-3/5">

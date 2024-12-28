@@ -1,17 +1,18 @@
 type Props = {
   name: string;
-  description: string;
+  description?: string;
   image: string;
+  index: string;
 };
 
-const Class = ({ name, description, image }: Props) => {
+const Class = ({ name, description, image, index }: Props) => {
     const overlayStyles = `p-5 absolute flex
   h-[380px] w-[450px] flex-col items-center justify-center
   bg-primary-500 text-center text-white
   opacity-0 transition duration-500 hover:opacity-90`;
 
   return (
-    <li className="relative mx-5 inline-block h-[380px] w-[450px]">
+    <li key={index} className="relative mx-5 inline-block h-[380px] w-[450px]">
       <div className={overlayStyles}>
         <p className="text-2x1">{name}</p>
         <p className="mt-5">{description}</p>

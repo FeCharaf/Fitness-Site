@@ -82,7 +82,7 @@ const OurClasses = ({ setSelectedPage }: Props) => {
           <ul className="w-[2800px] whitespace-nowrap">
             {classes.map((item: ClassType, index) => (
               <Class
-                key={`${item.name}-${item.index}`}
+                key={`${item.name}-${index}`}
                 name={item.name}
                 description={item.description}
                 image={item.image}

@@ -1,11 +1,18 @@
 import image from "@/assets/ContactUsPageGraphic.png";
+import { SelectedPage } from "@/shared/types";
+import { motion } from "framer-motion";
 
-const ContactUs = () => {
+type Props = {
+  setSelectedPage: (value:SelectedPage) => void;
+}
+
+const ContactUs = ({ setSelectedPage }:Props) => {
   const inputStyles = `mb-5 rounded-lg bg-primary-300
   px-5 py-3 placeholder-white`;
   return (
     <section id="contactus" className="py-24">
-      <div className="mx-auto flex h-[800px] w-5/6">
+      <motion.div className="mx-auto flex h-[800px] w-5/6"
+      onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}>
         <div>
           <h1 className="font-montserrat text-3xl font-bold">
             <strong className="text-primary-500">JOIN NOW</strong> TO GET IN
@@ -37,7 +44,7 @@ const ContactUs = () => {
             alt="Contact Us Illustration"
           ></img>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

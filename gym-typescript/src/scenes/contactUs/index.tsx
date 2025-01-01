@@ -12,12 +12,12 @@ const ContactUs = ({ setSelectedPage }: Props) => {
   const inputStyles = `mb-5 rounded-lg bg-primary-300
   px-5 py-3 placeholder-white`;
   return (
-    <section id="contactus" className="py-24">
+    <section id="contactus" className="mx-auto w-5/6 pb-32 pt-24">
       <motion.div
-        className="mx-auto flex h-[800px] w-5/6"
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
       >
         <motion.div
+          className="md:w-3/5"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }} //amount is the percentage of the div that you can see to proc the animation
@@ -41,17 +41,35 @@ const ContactUs = ({ setSelectedPage }: Props) => {
         </motion.div>
         {/* FORM AND IMAGE */}
 
-        <form className="flex flex-col gap-5">
-          <input className={inputStyles} type="text" placeholder="NAME" />
-          <input className={inputStyles} type="text" placeholder="EMAIL" />
-          <input className={inputStyles} type="text" placeholder="MESSAGE" />
-          <button
-            type="submit"
-            className="w-1/4 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white"
+        <div className="mt-10 justify-between gap-8 md:flex">
+          <motion.div
+            className="mt-10 basis-3/5 md:mt-0"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
           >
-            SUBMIT
-          </button>
-        </form>
+            <form>
+              <input className={inputStyles} type="text" placeholder="NAME" />
+              <input className={inputStyles} type="text" placeholder="EMAIL" />
+              <input
+                className={inputStyles}
+                type="text"
+                placeholder="MESSAGE"
+              />
+              <button
+                type="submit"
+                className="w-1/4 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white"
+              >
+                SUBMIT
+              </button>
+            </form>
+          </motion.div>
+        </div>
 
         <div className="flex w-1/2 items-center justify-center">
           <img

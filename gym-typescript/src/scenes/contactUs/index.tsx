@@ -1,41 +1,57 @@
 import image from "@/assets/ContactUsPageGraphic.png";
 import { SelectedPage } from "@/shared/types";
+import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import HText from "@/shared/HText";
 
 type Props = {
-  setSelectedPage: (value:SelectedPage) => void;
-}
+  setSelectedPage: (value: SelectedPage) => void;
+};
 
-const ContactUs = ({ setSelectedPage }:Props) => {
+const ContactUs = ({ setSelectedPage }: Props) => {
   const inputStyles = `mb-5 rounded-lg bg-primary-300
   px-5 py-3 placeholder-white`;
   return (
     <section id="contactus" className="py-24">
-      <motion.div className="mx-auto flex h-[800px] w-5/6"
-      onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}>
-        <div>
+      <motion.div
+        className="mx-auto flex h-[800px] w-5/6"
+        onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
+      >
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }} //amount is the percentage of the div that you can see to proc the animation
+          transition={{ duration: 0.5 }} // duration of the animation
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           <h1 className="font-montserrat text-3xl font-bold">
-            <strong className="text-primary-500">JOIN NOW</strong> TO GET IN
-            SHAPE
+            <HText>
+              <span className="text-primary-500">JOIN NOW </span>
+              TO GET IN SHAPE
+            </HText>
           </h1>
-          <p className="py-8">
+          <p className="my-5">
             Congue adipiscing risus commodo placerat. Tellus et in feugiat nisl
             sapien vel rhoncus. Placerat at in enim pellentesque. Nulla
             adipiscing leo egestas nisi elit risus sit. Nunc cursus sagittis.
           </p>
+        </motion.div>
+        {/* FORM AND IMAGE */}
 
-          <form className="flex flex-col gap-5">
-            <input className={inputStyles} type="text" placeholder="NAME" />
-            <input className={inputStyles} type="text" placeholder="EMAIL" />
-            <input className={inputStyles} type="text" placeholder="MESSAGE" />
-            <button
-              type="submit"
-              className="w-1/4 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white"
-            >
-              SUBMIT
-            </button>
-          </form>
-        </div>
+        <form className="flex flex-col gap-5">
+          <input className={inputStyles} type="text" placeholder="NAME" />
+          <input className={inputStyles} type="text" placeholder="EMAIL" />
+          <input className={inputStyles} type="text" placeholder="MESSAGE" />
+          <button
+            type="submit"
+            className="w-1/4 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white"
+          >
+            SUBMIT
+          </button>
+        </form>
 
         <div className="flex w-1/2 items-center justify-center">
           <img

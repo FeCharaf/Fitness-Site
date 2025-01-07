@@ -9,6 +9,18 @@ type Props = {
 };
 
 const ContactUs = ({ setSelectedPage }: Props) => {
+  const {
+    register,
+    trigger,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = async (e: any) => {
+    const isValid = await trigger();
+    if (!isValid) {
+      e.preventDefault();
+    }
+  };
   const inputStyles = `mb-5 rounded-lg bg-primary-300
   px-5 py-3 placeholder-white`;
   return (
@@ -53,7 +65,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <form>
+            <form target="_blank" onSubmit={onSubmit} method="POST" action="https://formsubmit.co/felipecharaf@gmail.com">
               <input className={inputStyles} type="text" placeholder="NAME" />
               <input className={inputStyles} type="text" placeholder="EMAIL" />
               <input

@@ -1,5 +1,9 @@
 # Fitness Site
 
+![FitnessIMG](https://github.com/user-attachments/assets/a6b29a37-e65d-4977-a4db-7aef8a9869f4)
+
+
+
 🛠️ Tecnologias Utilizadas:
 - Typescript: Uso de enums, arrays, objetos e tipagem explícita para um código robusto.
 - React: Componentização, useState, useEffect, JSX e Renderização condicional
